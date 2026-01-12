@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://djtyny6wpd3gy"]
+
+[ext_resource type="PackedScene" uid="uid://2c8aved717kr" path="res://Models/gas-pump.glb" id="1_ybuy0"]
+[ext_resource type="Material" uid="uid://b4cako2nlqtwq" path="res://Materials/fuel_pump.tres" id="2_s1dkl"]
+[ext_resource type="Texture2D" uid="uid://cwhjv5wl0cq0o" path="res://Textures/Classic 64 Asset Pack/Signs/gas_station_01.png" id="3_ae2qw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s1dkl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_acmi1"]
+albedo_texture = ExtResource("3_ae2qw")
+uv1_scale = Vector3(2, 2, 2)
+
+[node name="gas-pump" instance=ExtResource("1_ybuy0")]
+
+[node name="Cube" parent="." index="0"]
+material_override = ExtResource("2_s1dkl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0.2485171, 0.75495714, 0)
+mesh = SubResource("BoxMesh_s1dkl")
+surface_material_override/0 = SubResource("StandardMaterial3D_acmi1")

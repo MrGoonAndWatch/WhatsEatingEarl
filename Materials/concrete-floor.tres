@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2r7h3ama0wjh"]
+
+[ext_resource type="Texture2D" uid="uid://ciwp8qf5jtr26" path="res://Textures/Classic 64 Asset Pack/Concrete/concrete_13.jpg" id="1_yr6pj"]
+
+[resource]
+albedo_color = Color(0.5409905, 0.5409905, 0.5409905, 1)
+albedo_texture = ExtResource("1_yr6pj")
+metallic = 1.0
+metallic_specular = 0.0
+uv1_scale = Vector3(3, 3, 3)
