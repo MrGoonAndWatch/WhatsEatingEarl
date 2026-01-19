@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy1j64v360ecn"]
+
+[ext_resource type="Script" uid="uid://b1ureph2p3mgi" path="res://Scripts/Player/player.gd" id="1_6dc14"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6dc14"]
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("rotating_parts")]
+script = ExtResource("1_6dc14")
+rotating_parts = NodePath("RotatingParts")
+
+[node name="RotatingParts" type="Node3D" parent="."]
+
+[node name="PlayerCamera" type="Camera3D" parent="RotatingParts"]
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_6dc14")

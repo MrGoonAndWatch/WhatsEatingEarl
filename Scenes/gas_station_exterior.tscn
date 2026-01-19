@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://c0mrc8efmlsym"]
 
 [ext_resource type="Material" uid="uid://b2r7h3ama0wjh" path="res://Materials/concrete-floor.tres" id="1_a8aym"]
-[ext_resource type="Environment" uid="uid://bgokqcu6sjofy" path="res://Materials/env_exterior_dreary.tres" id="1_wiiy0"]
+[ext_resource type="PackedScene" uid="uid://cy1j64v360ecn" path="res://Prefabs/Player/player.tscn" id="1_wiiy0"]
 [ext_resource type="Texture2D" uid="uid://b3dof4o7r2bec" path="res://Textures/Classic 64 Asset Pack/Road/road_01.png" id="2_2w03i"]
 [ext_resource type="PackedScene" uid="uid://djtyny6wpd3gy" path="res://Prefabs/Models/gas_pump.tscn" id="2_a8aym"]
 [ext_resource type="Texture2D" uid="uid://yljc61jyp80j" path="res://Textures/Classic 64 Asset Pack/Ground/grass_03.png" id="3_uo5xm"]
@@ -30,10 +30,8 @@ uv1_scale = Vector3(100, 100, 100)
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.93464, 5.572796, 0)
-environment = ExtResource("1_wiiy0")
-current = true
+[node name="Player" parent="." instance=ExtResource("1_wiiy0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.235476, 1.1067235, -0.009898663)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.8765168, 0.021123046, 0.48090756, -0.48137122, 0.038462427, 0.8756726, 0, -0.9990368, 0.04388099, 46.648594, 27.279448, 0)
@@ -204,3 +202,5 @@ transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 9.48
 visible = false
 light_energy = 4.299
 spot_range = 21.481
+
+[editable path="Player"]
