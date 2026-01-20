@@ -20,14 +20,6 @@ func _input(event):
 		# print("mouse capture %s" % [event.relative])
 		var mouse_dir = event.relative * MOUSE_SENSITIVITY
 		rotate_camera(mouse_dir)
-	# This works but ew.
-	# elif (event is InputEventJoypadMotion 
-	#	and abs(event.axis_value) > GAMEPAD_DEADZONE):
-	#	print ("joypad motion captured %s" % [event])
-	#	if event.axis == RSTICK_H_AXISID: # 2
-	#		rotate_camera(event.axis_value, 0)
-	#	elif event.axis == RSTICK_V_AXISID: # 3
-	#		rotate_camera(0, event.axis_value)
 
 func get_movement(delta: float) -> Vector3:
 	var move_input = wee_constants.get_movement_vector()
